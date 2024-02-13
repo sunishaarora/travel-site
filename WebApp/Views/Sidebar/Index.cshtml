@@ -1,0 +1,71 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+
+
+@if (Model != null && Model.PageItem != null)
+{
+    <div class="sidebar-widget wow fadeInUp">
+        <h2 class="widget-title">@Html.Sitecore().Field("Title")</h2>
+        <div class="recent-post">
+            <div class="post-item">
+                <div class="post-img">
+                    @Html.Sitecore().Field("Image1")
+                </div>
+                <div class="post-text">
+                    @Html.Sitecore().Field("Post1")
+                    <div class="post-meta">
+                        <p>@Html.Sitecore().Field("Author1")</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="post-img">
+                    @Html.Sitecore().Field("Image2")
+                </div>
+                <div class="post-text">
+                    @Html.Sitecore().Field("Post2")
+                    <div class="post-meta">
+                        <p>@Html.Sitecore().Field("Author2")</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="post-img">
+                    @Html.Sitecore().Field("Image3")
+                </div>
+                <div class="post-text">
+                    @Html.Sitecore().Field("Post3")
+                    <div class="post-meta">
+                        <p>@Html.Sitecore().Field("Author3")</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="post-img">
+                    @Html.Sitecore().Field("Image4")
+                </div>
+                <div class="post-text">
+                    @Html.Sitecore().Field("Post4")
+                    <div class="post-meta">
+                        <p>@Html.Sitecore().Field("Author4")</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="post-img">
+                    @Html.Sitecore().Field("Image5")
+                </div>
+                <div class="post-text">
+                    @Html.Sitecore().Field("Post5")
+                    <div class="post-meta">
+                        <p>@Html.Sitecore().Field("Author5")</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,84 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+
+@if (Model != null && Model.PageItem != null)
+{
+
+    <div class="top-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-12">
+                    <div class="logo">
+                        <a href="/">
+                            <h1>@Html.Sitecore().Field("Title1")</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon">
+                                    <i class="flaticon-calendar"></i>
+                                </div>
+                                <div class="top-bar-text">
+                                    <h3>@Html.Sitecore().Field("Item1")</h3>
+                                    <p>@Html.Sitecore().Field("Value_Item1")</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon">
+                                    <i class="flaticon-call"></i>
+                                </div>
+                                <div class="top-bar-text">
+                                    <h3>@Html.Sitecore().Field("Item2")</h3>
+                                    <p>@Html.Sitecore().Field("Value_Item2")</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon">
+                                    <i class="flaticon-send-mail"></i>
+                                </div>
+                                <div class="top-bar-text">
+                                    <h3>@Html.Sitecore().Field("Item3")</h3>
+                                    <p>@Html.Sitecore().Field("Value_Item3")</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <a href="#" class="navbar-brand">MENU</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto">
+                        @Html.Sitecore().Field("Nav1", new { @class = "nav-item nav-link active" })
+                        @Html.Sitecore().Field("Nav2", new { @class = "nav-item nav-link" })
+                        @Html.Sitecore().Field("Nav3", new { @class = "nav-item nav-link" })
+                        @Html.Sitecore().Field("Nav4", new { @class = "nav-item nav-link" })
+                    </div>
+                    <div class="ml-auto">
+                        @Html.Sitecore().Field("Call_To_Action", new { @class = "btn" })
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+}
